@@ -1,0 +1,204 @@
+@media (max-width: 1200px) {
+
+    /* menu desplegable */
+
+    a {
+        transition: none;
+    }
+    
+    .link a {
+        position: relative;
+    }
+
+    .link a:hover::after {
+        width: 0%;
+    }
+
+    .link a:hover {
+        transition: .3s ease;
+        color: rgb(100, 100, 100);
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex;
+        margin: 5vw;
+        position: fixed;
+        font-size: xx-large;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    #menu-desplegable {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: rgba(15, 15, 15, 0.9);
+        z-index: 0;
+        flex-direction: column;
+        align-items: center;
+        visibility: hidden;
+    }
+
+    /* nuestro equipo */
+
+    .nuestro-equipo {
+        height: auto;
+    }
+
+    .fotos {
+        display: block;
+    }
+
+    .centrarFotos {
+        width: 100vw;
+    }
+
+    #foto1 {
+        position: relative;
+        width: 30vw;
+        height: 54vw;
+        left: -5vw;
+    }
+    
+    #foto2 {
+        width: 30vw;
+        height: 40vw;
+    }
+    
+    #foto3 {
+        width: 36vw;
+        height: 46vw;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    
+    /* inicio */
+
+    .inicio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-inicio {
+        margin-top: 30vh;
+        margin-left: 15vw;
+    }
+
+    .blur {
+        box-shadow: 0 0 1200px 120px var(--detalles1);
+        left: 0;
+    }
+
+    .blur2 {
+        visibility: visible;
+        position: absolute;
+        box-shadow: 0 0 1200px 120px var(--detalles2);
+        z-index: -1;
+        right: 0;
+        top: 50vh;
+    }
+
+    .slogan {
+        font-size: xx-large;
+    }
+
+    .logo {
+        width: 70vw;
+    }
+
+    .imagen-inicio {
+        visibility: hidden;
+    }
+
+    /* sobre la empresa */
+
+    #h3-valores {
+        text-align: center;
+    }
+
+    .sobre-la-empresa {
+        height: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* inicio */
+
+    .slogan {
+        text-align: center;
+    }
+
+    .logo-chico {
+        display: block;
+        margin-top: 15vh;
+    }
+
+    .nombre-chico {
+        display: block;
+        margin-top: 15vh;
+        margin-right: 2vw;
+        font-size: xx-large;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .blur, .blur2 {
+        top: 0;
+        box-shadow: 0 0 800px 100px var(--detalles3);
+    }
+
+    .tecno {
+        color: var(--detalles2);
+    }
+
+    .logic {
+        color: var(--detalles1);
+    }
+
+    /* contacto */
+
+    .tit-contacto {
+        margin-bottom: 10vh;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        margin-bottom: 10vh;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .contacto-img {
+        width: 7vw;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contenedor-inicio {
+        margin-top: 5vh;
+    }
+}
+
+
+
+

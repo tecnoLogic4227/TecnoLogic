@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-fuente);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.8vw;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 6px;
+}
+
+:root {
+    --fondoBoton: grey;
+    --circuloBoton: black;
+    --fondo: rgb(30,30,30);
+    --color-fuente: white;
+    --detalles1: rgb(198, 101, 16);
+    --detalles2: rgb(17, 151, 203);
+    --detalles3: rgb(208, 38, 154);
+}
+
+[tema="light"] {
+    --fondoBoton: grey;
+    --circuloBoton: white;
+    --fondo: rgb(255,253,240);
+    --color-fuente: black;
+    --detalles1: rgb(198, 101, 16);
+    --detalles2: rgb(17, 171, 203);
+    --detalles3: rgb(208, 38, 154);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--fondo);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* barra navegacion */
+
+.menu {
+    display: flex;
+    width: 60vw;
+    height: 10vh;
+    margin-left: 20vw;
+    background-color: rgba(15, 15, 15, 0.9);
+    position: fixed;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid var(--detalles2);
+}
+
+.menu-desplegable, .menu-icon {
+    display: none;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    list-style: none;
+    width: 15vw;
+    height: 10vh;
+    text-align: center;  
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 5vh;
+    text-decoration: none;
+    color: var(--color-fuente);
+    transition: all .3s ease-in-out;
+}
+
+.link a {
+    position: relative;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--detalles1);
+    transition: all .3s ease;
+}
+
+.link a:hover::after {
+    width: 100%;
+}
+
+/* inicio */
+
+.inicio {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-inicio {
+    margin-top: 10vh; 
+    margin-right: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blur2 {
+    visibility: hidden;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1200px 100px var(--detalles3);
+    z-index: -1;
+    left: 15vw;
+    top: 50vh;
+}
+
+.slogan {
+    width: auto;
+    color: var(--color-fuente);
+    margin-right: 1vw;
+}
+
+.logo-chico, .nombre-chico {
+    display: none;
+}
+
+.logo {
+    width: 30vw;
+}
+
+.imagen-inicio {
+    width: 20vw;
+    margin-top: 5vh;
+}
+
+/* sobre la empresa */
+
+.sobre-la-empresa {
+    max-width: 70vw;
+    margin-left: 15vw;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 13vh;
+}
+
+.tit-empresa, .sub-tit {
+    color: var(--color-fuente);
+    width: 70vw;
+    text-align: center;
+}
+
+.sub-tit {
+    margin-bottom: 5vh;
+}
+
+.uruguay {
+    color: var(--detalles2);
+}
+
+#h3-valores {
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+.mision {
+    color: var(--detalles1);
+}
+
+.vision {
+    color: var(--detalles2);
+}
+
+.valores {
+    color: var(--detalles3);
+}
+
+.p-mision, .p-vision, .p-valores {
+    text-align: justify;
+}
+
+/* nuestro equipo */
+
+.nuestro-equipo {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.tit-nuestroEquipo {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.fotos {
+    display: flex;
+    height: 40%;
+    align-items: center;
+}
+
+#foto1 {
+    width: 15vw;
+    height: 27vw;
+}
+
+#foto2 {
+    width: 15vw;
+    height: 20vw;
+    margin-top: 13vh;
+}
+
+#foto3 {
+    width: 18vw;
+    height: 23vw;
+    margin-top: 7vh;
+}
+
+.centrar {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrarFotos {
+    display: flex;
+    width: 33vw;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+/* contacto */ 
+
+.contacto {
+    margin-left: 15vw;
+    display: inline-block;
+    max-width: 70vw;
+    height: 75vh;
+    padding-top: 15vh;
+}
+
+.tit-contacto {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
+.contacto-img {
+    display: flex;
+    width: 3vw;
+}
+
+.botones {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+.link-contacto {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+button {
+    background-color: rgba(100,100,100,0.5);
+    border: 1px solid white;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 50px 5px var(--detalles3);
+    border-color: var(--detalles1);
+}
+
+
